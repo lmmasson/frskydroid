@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Frskydroid</string>
+    
+    <string name="separator">" : "</string>
+    
+    <string name="RSSIrx_label_default">Réception</string>
+    <string name="RSSIrx_value_default">0</string>
+    <string name="RSSIrx_unit">%</string>
+    
+    <string name="RSSItx_label_default">Emission</string>
+    <string name="RSSItx_value_default">0</string>
+    <string name="RSSItx_unit">%</string>
+    
+    <string name="ad1_level_label_default">AD1</string>
+    <string name="ad1_level_value_default">0</string>
+    <string name="ad1_level_unit">V</string>
+
+    <string name="ad2_level_label_default">AD2</string>
+    <string name="ad2_level_value_default">0</string>
+    <string name="ad2_level_unit">2</string>        
+        
+</resources>
