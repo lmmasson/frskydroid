@@ -24,17 +24,20 @@ public class FrskydroidActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-
+        // Check for Bluetooth availability
         if (mBluetoothAdapter==null) {
         	Toast.makeText(this, "BlueTooth Not supported", Toast.LENGTH_LONG).show();
         	this.finish();
+        	return; // necessary to be sure that finish will stop the activity now
         } else {
         	Toast.makeText(this, "BlueTooth ok", Toast.LENGTH_SHORT).show();	
         }
-        
+
+        // Check if bluetooth is enabled
         if (!mBluetoothAdapter.isEnabled()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, 2);
         }
+        
     }
 }
