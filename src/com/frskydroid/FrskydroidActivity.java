@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.bluetooth.BluetoothAdapter;
 import android.widget.Toast;
+import android.content.Intent;
+import android.bluetooth.BluetoothAdapter.*;
+
 
 
 public class FrskydroidActivity extends Activity {
@@ -14,7 +17,7 @@ public class FrskydroidActivity extends Activity {
     public int tx;
     public int ad1;
     public int ad2;
-    public BluetoothAdapter mBlueToothAdapter = BluetoothAdapter.getDefaultAdapter();
+    public BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,10 +25,16 @@ public class FrskydroidActivity extends Activity {
         setContentView(R.layout.main);
         
 
-        if (mBlueToothAdapter==null) {
+        if (mBluetoothAdapter==null) {
         	Toast.makeText(this, "BlueTooth Not supported", Toast.LENGTH_LONG).show();
+        	this.finish();
         } else {
         	Toast.makeText(this, "BlueTooth ok", Toast.LENGTH_SHORT).show();	
+        }
+        
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, 2);
         }
     }
 }
