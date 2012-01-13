@@ -18,6 +18,9 @@
 
     <string name="ad2_level_label_default">AD2</string>
     <string name="ad2_level_value_default">0</string>
-    <string name="ad2_level_unit">2</string>        
+    <string name="ad2_level_unit">2</string>
+    
+    <string name="MSG_BT_not_supported">Bluetooth not supported by your device</string>
+    <string name="MSG_must_activate_BT">You must activate BlueTooth to run this application</string>     
         
 </resources>
