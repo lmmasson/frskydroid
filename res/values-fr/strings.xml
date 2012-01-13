@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="separator">" : "</string>
+        
+    <string name="MSG_BT_not_supported">Bluetooth n\'est pas supporté par votre appareil</string>
+    <string name="MSG_must_activate_BT">Vous devez activer le bluetooth pour utiliser cette application</string>     
+        
+</resources>
